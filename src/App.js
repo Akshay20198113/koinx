@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Headers from './Components/Header';
+import TradingViewWidget from './Components/TradingViewWidget';
+import Navbar from './Components/Navbar';
+import Add from './Components/Add';
+import TrendingCoin from './Components/TrendingCoin';
+import CoinWithGraph from './Components/CoinWithGraph';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='w-screen h-auto bg-gray-300'>
+      <Navbar />
+      <div>
+        <div className='md:flex'>
+          <div>
+            <TradingViewWidget />
+            <Headers />
+          </div>
+          <div>
+            <Add />
+            <TrendingCoin />
+          </div>
+        </div>
+        <CoinWithGraph />
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
